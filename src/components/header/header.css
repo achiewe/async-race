@@ -1,0 +1,23 @@
+.header {
+  position: relative;
+  padding: 10px 0;
+}
+
+.headling {
+  font-family: "MachineGunk", sans-serif;
+  font-size: 40px;
+  text-align: center;
+  color: #01d7e1;
+}
+
+.header-gif {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+
+@media (max-width: 630px) {
+  .header-gif {
+    display: none;
+  }
+}

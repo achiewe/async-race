@@ -1,0 +1,16 @@
+.playground-page {
+  margin-bottom: 20px;
+}
+
+.playground-item {
+  position: relative;
+  margin-top: 30px;
+  border-bottom: 3px dashed #fff;
+}
+
+.flag {
+  height: 145px;
+  position: absolute;
+  right: 120px;
+  bottom: 0;
+}

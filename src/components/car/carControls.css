@@ -1,0 +1,15 @@
+.car-controls {
+  margin:  5px 0 15px;
+}
+
+.car-control-buttons {
+  display: flex;
+}
+
+.btn-select, .btn-remove {
+  width: 70px;
+}
+
+.btn-start, .btn-stop {
+  width: 32px;
+}

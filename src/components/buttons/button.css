@@ -1,0 +1,33 @@
+.button {
+  display: block;
+  width: 90px;
+  height: 30px;
+  margin: 3px;
+  text-align: center;
+  border: 0;
+  border-radius: 2px;
+  background-color: #01fffd;
+  cursor: pointer;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.button:hover {
+  background-color: #05b9bf;
+}
+
+.btn-disabled {
+  opacity: 0.3;
+  cursor: auto;
+}
+
+.btn-disabled:hover {
+  background-color: #01fffd;
+}
