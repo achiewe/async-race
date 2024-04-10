@@ -1,17 +1,19 @@
 import Header from "../header/header";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Garage from "../pages/garage-page/garage";
+import Winners from "../pages/winners-page/winners";
+import PageRoute from "../routing/pageRoute";
 
 function App() {
   return (
     <>
       <Header />
-      <Router>
-        <Header />
-        <Routes>
-          <Route path="/garage" element={<Garage />} />
-          <Route path="/winners" element={<Winners />} />
-        </Routes>
-      </Router>
+      <PageRoute path="#garage">
+        <Garage />
+      </PageRoute>
+
+      <PageRoute path="#winners">
+        <Winners />
+      </PageRoute>
     </>
   );
 }
