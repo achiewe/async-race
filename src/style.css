@@ -1,50 +1,19 @@
-@font-face {
-  font-family: "TrulyMadlyDpad";
-  src: url("../assets/TrulyMadlyDpad.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "MachineGunk";
-  src: url("../assets/MachineGunk.ttf") format("truetype");
-}
-
-*,
-* ::before,
-* ::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  font-family: "TrulyMadlyDpad", sans-serif;
-  font-size: 16px;
-  color: #fff;
-  background-color: #1c2a33;
-  padding: 0 20px;
+  font-family: Arial, sans-serif;
+  background-color: red;
 }
 
-ul,
-ol {
-    list-style-type: none;
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-input,
-button,
-textarea,
-select,
-a {
-  font: inherit;
-  color: black;
-  text-decoration: none;
+h1 {
+  color: #333;
 }
 
-@media (max-width: 746px) {
-  body {
-    padding: 0 10px;
-  }
+p {
+  color: #666;
+  line-height: 1.5;
 }
