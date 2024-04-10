@@ -1,6 +1,4 @@
-import { useEffect } from "react";
 import { TAppState } from "../../types/TAppState";
-import Button from "../buttons/button";
 
 interface Props {
   appState: TAppState;
@@ -25,12 +23,6 @@ function EditCarItem({ appState }: Props) {
             disabled={!appState.selected.selectedCar}
           />
         </div>
-        {/* <Button
-          className="button btn-edit"
-          text="Edit"
-          disabled={!appState.selected.selectedCar}
-        //   handleClick={console.log("click")}
-        /> */}
       </div>
     </div>
   );
