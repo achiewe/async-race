@@ -1,6 +1,5 @@
 import React from "react";
 import Button from "../buttons/button";
-
 import PropsCarCreate from "../../types/propsCarCreate";
 
 export default function CreateCarItem({ appState }: PropsCarCreate) {
