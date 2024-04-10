@@ -6,6 +6,8 @@ import PageRoute from "../routing/pageRoute";
 import { TAppState, TCarDataStatus } from "../../types/TAppState";
 
 function App() {
+  const pages = ["garage", "winners"];
+  const [activePage, setActivePage] = useState("garage");
   const [activeContent, setActiveContent] = useState(1);
   const [newCarName, setNewCarName] = useState("");
   const [newCarColor, setNewCarColor] = useState("#000000");
@@ -25,7 +27,7 @@ function App() {
   };
   return (
     <>
-      <Header />
+      <Header pages={pages} pageStatus={{ activePage, setActivePage }} />
       <PageRoute path="#garage">
         <Garage appState={appStatus} />
       </PageRoute>
