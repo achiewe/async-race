@@ -1,5 +1,4 @@
 import PropsButton from "../../types/propsButton";
-
 import "./button.css";
 
 function Button({ className, text, disabled, handleClick }: PropsButton) {

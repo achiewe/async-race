@@ -25,12 +25,12 @@ function EditCarItem({ appState }: Props) {
             disabled={!appState.selected.selectedCar}
           />
         </div>
-        <Button
+        {/* <Button
           className="button btn-edit"
           text="Edit"
           disabled={!appState.selected.selectedCar}
-          handleClick={console.log("click")}
-        />
+        //   handleClick={console.log("click")}
+        /> */}
       </div>
     </div>
   );

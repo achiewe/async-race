@@ -1,6 +1,8 @@
-import React from "react";
 import Button from "../buttons/button";
 import PropsCarCreate from "../../types/propsCarCreate";
+import { createCar } from "../../services/getDataApi";
+import getRandomInt from "../../services/getRandomInt";
+import "./settings.css";
 
 export default function CreateCarItem({
   appState,
@@ -8,6 +10,19 @@ export default function CreateCarItem({
 }: PropsCarCreate) {
   const onChangeName = ({ target }: { target: HTMLInputElement }) => {
     appState.createName.setNewCarName(target.value);
+  };
+
+  const onCreateCar = async () => {
+    const newName =
+      appState.createName.newCarName.length !== 0
+        ? appState.createName.newCarName
+        : `Your super-car RSS#${getRandomInt(1, 1000)}`;
+
+    await createCar(newName, appState.createColor.newCarColor);
+
+    dataStatus.setDataChanged(true);
+    appState.createName.setNewCarName("");
+    appState.createColor.setNewCarColor("#000000");
   };
 
   const onChangeColor = ({ target }: { target: HTMLInputElement }) => {

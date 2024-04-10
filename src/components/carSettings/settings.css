@@ -9,6 +9,19 @@
   width: 100%;
 }
 
+.button-group-title {
+  display: block;
+  color: #f3b552;
+  font-weight: 700;
+}
+
+.settings-content {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  gap: 7px;
+}
+
 .button-group {
   display: flex;
   align-items: center;
@@ -16,16 +29,9 @@
   gap: 7px;
 }
 
-.button-group-title {
-  display: block;
-  width: 60px;
-  color: #01fffd;
-  font-weight: 500;
-}
-
 .input-text {
   display: block;
-  width: 200px;
+  width: 150px;
   height: 30px;
   padding-left: 10px;
   border: 0;
@@ -39,7 +45,7 @@
 
 .input-color {
   display: block;
-  width: 60px;
+  width: 30px;
   height: 30px;
   border: 0;
   border-radius: 2px;
