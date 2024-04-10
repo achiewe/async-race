@@ -6,7 +6,7 @@
   text-align: center;
   border: 0;
   border-radius: 2px;
-  background-color: #01fffd;
+  background-color: #f3b552;
   cursor: pointer;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -20,7 +20,7 @@
 }
 
 .button:hover {
-  background-color: #f3b552;
+  background-color: #f5ce8e;
 }
 
 .btn-disabled {

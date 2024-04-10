@@ -1,0 +1,51 @@
+.settings {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 30px;
+}
+
+.settings-container {
+  width: 100%;
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+.button-group-title {
+  display: block;
+  width: 60px;
+  color: #01fffd;
+  font-weight: 500;
+}
+
+.input-text {
+  display: block;
+  width: 200px;
+  height: 30px;
+  padding-left: 10px;
+  border: 0;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  outline: none;
+}
+
+.input-color {
+  display: block;
+  width: 60px;
+  height: 30px;
+  border: 0;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  cursor: pointer;
+}

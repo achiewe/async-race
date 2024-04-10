@@ -1,5 +1,13 @@
+import CreateCarItem from "../../carSettings/createCar";
+
 function Garage(): JSX.Element {
-  return <div></div>;
+  return (
+    <main>
+      <div>
+        <CreateCarItem />
+      </div>
+    </main>
+  );
 }
 
 export default Garage;
