@@ -13,3 +13,15 @@ export async function getCars(page?: number, limit?: number) {
     return { allCars, carsOnPageX };
   });
 }
+
+export async function createCar(name: string, color: string) {
+  const options = {
+    method: "POST",
+    body: JSON.stringify({ name, color }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+
+  return (await fetch(garageURL, options)).json();
+}

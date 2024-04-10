@@ -2,12 +2,13 @@ import React from "react";
 import Button from "../buttons/button";
 import PropsCarCreate from "../../types/propsCarCreate";
 
-export default function CreateCarItem({ appState }: PropsCarCreate) {
+export default function CreateCarItem({
+  appState,
+  dataStatus,
+}: PropsCarCreate) {
   const onChangeName = ({ target }: { target: HTMLInputElement }) => {
     appState.createName.setNewCarName(target.value);
   };
-
-  const onCreateCar = () => {};
 
   const onChangeColor = ({ target }: { target: HTMLInputElement }) => {
     appState.createColor.setNewCarColor(target.value);
