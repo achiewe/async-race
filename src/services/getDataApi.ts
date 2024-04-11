@@ -14,6 +14,15 @@ export async function getCars(page?: number, limit?: number) {
   });
 }
 
+export async function getCar(id: number) {
+  return fetch(`${garageURL}/${id}`)
+    .then((res) => {
+      if (res.ok) return res.json();
+      throw new Error(res.statusText);
+    })
+    .catch((err) => err);
+}
+
 export async function createCar(name: string, color: string) {
   const options = {
     method: "POST",
@@ -40,5 +49,61 @@ export async function updateCar(name: string, color: string, id: number) {
       if (res.ok) return res.json();
       throw new Error(res.statusText);
     })
+    .catch((err) => err);
+}
+
+export async function deleteCar(id: number) {
+  const options = {
+    method: "DELETE",
+  };
+
+  return fetch(`${garageURL}/${id}`, options)
+    .then((res) => {
+      if (res.ok) return res.json();
+      throw new Error(res.statusText);
+    })
+    .catch((err) => err);
+}
+
+export async function startEngine(id: number) {
+  const url = `${engineURL}?id=${id}&status=started`;
+  const options = {
+    method: "PATCH",
+  };
+
+  return fetch(url, options)
+    .then((res) => {
+      if (res.ok) return res.json();
+      throw new Error(res.statusText);
+    })
+    .catch((err) => err);
+}
+
+export async function stopEngine(id: number) {
+  const url = `${engineURL}?id=${id}&status=stopped`;
+  const options = {
+    method: "PATCH",
+  };
+
+  return fetch(url, options)
+    .then((res) => {
+      if (res.ok) return res.json();
+      throw new Error(res.statusText);
+    })
+    .catch((err) => err);
+}
+
+export async function drive(id: number) {
+  const url = `${engineURL}?id=${id}&status=drive`;
+  const options = {
+    method: "PATCH",
+  };
+
+  return fetch(url, options)
+    .then((res) => {
+      if (res.ok) return res.json();
+      throw new Error(res.statusText);
+    })
+    .then((res) => res)
     .catch((err) => err);
 }

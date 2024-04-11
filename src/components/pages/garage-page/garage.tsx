@@ -5,6 +5,7 @@ import EditCarItem from "../../carSettings/updateCar";
 import { TCars } from "../../../types/TCarsData";
 import RaceSettings from "../../carSettings/raceSettings";
 import { TCarControls } from "../../../types/TControls";
+import Playground from "../../playground/playground";
 
 interface Props {
   appState: TAppState;
@@ -29,18 +30,21 @@ function Garage({ appState }: Props): JSX.Element {
   const [carsControl, carsControlDispatch] = useReducer(manageCars, []);
   return (
     <main>
-      <div>
-        <CreateCarItem
-          dataStatus={{ dataChanged, setDataChanged }}
-          appState={appState}
-        />
-        <EditCarItem appState={appState} />
-        <div className="settings-btns">
-          <RaceSettings
-            carsControlData={{ carsControl, carsControlDispatch }}
+      <div className="container garage-container">
+        <div className="settings">
+          <CreateCarItem
             dataStatus={{ dataChanged, setDataChanged }}
+            appState={appState}
           />
+          <EditCarItem appState={appState} />
+          <div className="settings-btns">
+            <RaceSettings
+              carsControlData={{ carsControl, carsControlDispatch }}
+              dataStatus={{ dataChanged, setDataChanged }}
+            />
+          </div>
         </div>
+        <Playground />
       </div>
     </main>
   );
