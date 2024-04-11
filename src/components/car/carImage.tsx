@@ -3,6 +3,7 @@ import PropsImage from "../../types/propsImage";
 export default function carImage({ className, color }: PropsImage) {
   return (
     <svg
+      className={className}
       height="500"
       width="180"
       version="1.1"
@@ -11,7 +12,7 @@ export default function carImage({ className, color }: PropsImage) {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       viewBox="0 0 512 512"
       xmlSpace="preserve"
-      fill="#000000"
+      fill={color}
     >
       <g id="SVGRepo_bgCarrier" stroke-width="0" />
 

@@ -44,7 +44,13 @@ function Garage({ appState }: Props): JSX.Element {
             />
           </div>
         </div>
-        <Playground />
+        <Playground
+          pageLimit={pageLimit}
+          carsOnPageData={{ carsOnPage, setCarsOnPage }}
+          carsControlData={{ carsControl, carsControlDispatch }}
+          dataStatus={{ dataChanged, setDataChanged }}
+          appState={appState}
+        />
       </div>
     </main>
   );
