@@ -11,6 +11,7 @@
 
 .button-group-title {
   display: block;
+  width: 60px;
   color: #f3b552;
   font-weight: 700;
 }

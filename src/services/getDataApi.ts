@@ -25,3 +25,20 @@ export async function createCar(name: string, color: string) {
 
   return (await fetch(garageURL, options)).json();
 }
+
+export async function updateCar(name: string, color: string, id: number) {
+  const options = {
+    method: "PUT",
+    body: JSON.stringify({ name, color }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+
+  return fetch(`${garageURL}/${id}`, options)
+    .then((res) => {
+      if (res.ok) return res.json();
+      throw new Error(res.statusText);
+    })
+    .catch((err) => err);
+}
