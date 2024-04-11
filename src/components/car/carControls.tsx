@@ -25,7 +25,6 @@ function Controls({
 
   const removeCar = async () => {
     const removeAuto = await deleteCar(carDataStatus.idData.id);
-
     if (!(removeAuto instanceof Error)) {
       dataStatus.setDataChanged(true);
     }
