@@ -5,12 +5,12 @@
 .car-image {
   position: absolute;
   right: calc(100% - 205px);
-  top: 10px;
+  top: 65px;
 }
 
 .car-svg {
   width: 120px;
-  height: 200px;
+  height: 100px;
   margin-left: 10px;
 }
 

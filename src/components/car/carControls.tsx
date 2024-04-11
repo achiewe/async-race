@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from "react";
 import PropsControl from "../../types/propsControl";
 import Button from "../buttons/button";
 import {
+  //   getWinner,
+  //   deleteWinner,
   deleteCar,
   startEngine,
   stopEngine,
