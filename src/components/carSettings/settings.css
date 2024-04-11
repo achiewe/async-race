@@ -56,3 +56,18 @@
   -o-border-radius: 2px;
   cursor: pointer;
 }
+
+.btn-start-race {
+  background-color: #0beb28;
+  cursor: pointer;
+}
+
+.btn-stop-race {
+  background-color: #f34973;
+  cursor: pointer;
+}
+
+.btn-generate {
+  width: 116px;
+  cursor: pointer;
+}
