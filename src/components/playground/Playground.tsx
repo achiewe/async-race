@@ -41,6 +41,7 @@ function View(
               appState={appState}
               key={`car_${item.id.toString()}`}
             />
+            <div className="roadDiv"></div>
             <img
               className="flag"
               src="../../assets/finishFlag.png"
