@@ -1,26 +1,26 @@
-.page-nav {
+.pageNav {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.page-nav-text {
+.pageNavText {
   display: block;
 }
 
-.page-nav-pagination {
+.pageNavPagination {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 10px 0;
 }
 
-.page-list {
+.pageList {
   display: flex;
 }
 
-.page-link {
+.pageLink {
   display: block;
   width: 9px;
   height: 9px;
@@ -40,15 +40,15 @@
   -o-transition: 0.3s;
 }
 
-.page-link:hover {
+.pageLink:hover {
   background-color: #00cccc;
 }
 
-.page-link-active {
+.pageLinkActive {
   border: 1px solid #00cccc;
 }
 
-.btn-next,
-.btn-prev {
+.btnNext,
+.btnPrev {
   width: 50px;
 }

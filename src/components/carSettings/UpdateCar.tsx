@@ -56,19 +56,19 @@ function UpdateCar({ appState }: Props): JSX.Element {
     }
   }, [appState.selected]);
   return (
-    <div className="settings-container">
-      <div className="settings-content">
-        <div className="button-group">
-          <p className="button-group-title">Edit: </p>
+    <div className="settingsContainer">
+      <div className="settingsContent">
+        <div className="buttonGroup">
+          <p className="buttonGroupTitle">Edit: </p>
           <input
-            className="input-text"
+            className="inputText"
             type="text"
             value={appState.editName.editedCarName}
             disabled={!appState.selected.selectedCar}
             onChange={editName}
           />
           <input
-            className="input-color"
+            className="inputColor"
             type="color"
             value={appState.editColor.editedCarColor}
             disabled={!appState.selected.selectedCar}
@@ -76,7 +76,7 @@ function UpdateCar({ appState }: Props): JSX.Element {
           />
         </div>
         <Button
-          className="button btn-edit"
+          className="button btnEdit"
           text="Edit"
           disabled={!appState.selected.selectedCar}
           handleClick={editCar}

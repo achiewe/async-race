@@ -94,10 +94,10 @@ function CarControls({
   }, []);
 
   return (
-    <div className="car-controls">
-      <div className="car-control-buttons">
+    <div className="carControls">
+      <div className="carControlButtons">
         <Button
-          className="button btn-select"
+          className="button btnSelect"
           text="Select"
           disabled={
             appState.selected.selectedCar?.idData.id === carDataStatus.idData.id
@@ -106,22 +106,22 @@ function CarControls({
         />
 
         <Button
-          className="button btn-remove"
+          className="button btnRemove"
           text="Remove"
           disabled={false}
           handleClick={removeCar}
         />
       </div>
 
-      <div className="car-control-buttons">
+      <div className="carControlButtons">
         <Button
-          className="button btn-start"
+          className="button btnStart"
           text="A"
           disabled={carEngineStart.isEngineStarted}
           handleClick={carStart}
         />
         <Button
-          className="button btn-stop"
+          className="button btnStop"
           text="B"
           disabled={!carEngineStart.isEngineStarted}
           handleClick={carStop}

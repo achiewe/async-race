@@ -5,9 +5,9 @@ function WinnerFrame({ className, winnerStatus }: PropsFrame): JSX.Element {
   const animationEnd = () => winnerStatus.setWinner(null);
 
   return (
-    <div className={`frame-wrapper ${className}`} onAnimationEnd={animationEnd}>
-      <div className="frame-body">
-        <p className="text-winner">{winnerStatus.winner?.name} went first!</p>
+    <div className={`frameWrapper ${className}`} onAnimationEnd={animationEnd}>
+      <div className="frameBody">
+        <p className="textWinner">{winnerStatus.winner?.name} went first!</p>
         <p>Time: {winnerStatus.winner?.time} sec</p>
         <p>Congratulations!</p>
       </div>

@@ -11,7 +11,7 @@ function Header({ pages, pageStatus }: PropsHeader): JSX.Element {
       </div>
       <img
         src="../../../assets/lamborghini.png"
-        className="header-gif"
+        className="headerGif"
         alt="lamborghini car"
       />
     </header>

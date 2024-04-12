@@ -50,8 +50,8 @@ function Car({
 
   return (
     <div className="car">
-      <div className="car-description">
-        <div className="car-info">
+      <div>
+        <div>
           <span>{carNumber}. </span>
           <span>{carNameState}</span>
         </div>
@@ -68,12 +68,12 @@ function Car({
       />
 
       <div
-        className={`car-image ${isEngineStarted ? "startMove" : ""} ${
+        className={`carImage ${isEngineStarted ? "startMove" : ""} ${
           isEngineStopped ? "stopMove" : ""
         }`}
         style={{ animationDuration: `${carTimeAnimation}s` }}
       >
-        <CarImage className="car-svg" color={carColorState} />
+        <CarImage className="carSvg" color={carColorState} />
       </div>
     </div>
   );

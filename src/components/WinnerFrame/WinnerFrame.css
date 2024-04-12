@@ -1,4 +1,4 @@
-.frame-wrapper {
+.frameWrapper {
   position: fixed;
   top: 0;
   left: 0;
@@ -12,7 +12,7 @@
   z-index: 10;
 }
 
-.frame-body {
+.frameBody {
   position: fixed;
   left: 50%;
   top: 50%;
@@ -36,16 +36,16 @@
   -o-border-radius: 5px;
 }
 
-.modal-body p {
+.frameBody p {
   margin-bottom: 10px;
 }
 
-.text-winner {
+.textWinner {
   font-weight: 700;
   color: #f3b552;
 }
 
-.active-modal {
+.activeModal {
   animation: showMessage 3s linear;
   -webkit-animation: showMessage 3s linear;
 }

@@ -2,13 +2,13 @@
   height: 130px;
 }
 
-.car-image {
+.carImage {
   position: absolute;
   right: calc(100% - 205px);
   top: 80px;
 }
 
-.car-svg {
+.carSvg {
   width: 120px;
   height: 100px;
   margin-left: 10px;

@@ -2,13 +2,13 @@
   padding: 20px 0;
 }
 
-.nav-list {
+.navList {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.nav-link {
+.navLink {
   margin: 0 10px;
   padding: 8px 20px;
   font-size: 18px;
@@ -26,10 +26,10 @@
   -o-transition: 0.3s;
 }
 
-.nav-link:hover {
+.navLink:hover {
   background-color: #f3ca87;
 }
 
-.nav-link-active {
+.navLinkActive {
   box-shadow: 4px 4px 0px #f3ca87;
 }

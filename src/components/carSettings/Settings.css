@@ -5,32 +5,32 @@
   margin-bottom: 30px;
 }
 
-.settings-container {
+.settingsContainer {
   width: 100%;
 }
 
-.button-group-title {
+.buttonGroupTitle {
   display: block;
   width: 60px;
   color: #f3b552;
   font-weight: 700;
 }
 
-.settings-content {
+.settingsContent {
   max-width: 600px;
   width: 100%;
   display: flex;
   gap: 7px;
 }
 
-.button-group {
+.buttonGroup {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 7px;
 }
 
-.input-text {
+.inputText {
   display: block;
   width: 150px;
   height: 30px;
@@ -44,7 +44,7 @@
   outline: none;
 }
 
-.input-color {
+.inputColor {
   display: block;
   width: 30px;
   height: 30px;
@@ -57,18 +57,18 @@
   cursor: pointer;
 }
 
-.btn-start-race {
+.btnStartRace {
   background-color: #0beb28;
   cursor: pointer;
 }
 
-.btn-stop-race {
+.btnStopRace {
   background-color: #0000ff;
   color: white;
   cursor: pointer;
 }
 
-.btn-generate {
+.btnGenerate {
   width: 116px;
   cursor: pointer;
 }

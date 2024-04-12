@@ -1,17 +1,17 @@
-.car-controls {
+.carControls {
   margin: 5px 0 15px;
 }
 
-.car-control-buttons {
+.carControlButtons {
   display: flex;
 }
 
-.btn-select,
-.btn-remove {
+.btnSelect,
+.btnRemove {
   width: 70px;
 }
 
-.btn-start,
-.btn-stop {
+.btnStart,
+.btnStop {
   width: 32px;
 }

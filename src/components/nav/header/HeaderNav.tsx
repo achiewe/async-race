@@ -5,7 +5,7 @@ import HeaderNavItem from "./HeaderNavItem";
 function HeaderNav({ pages, pageStatus }: PropsHeader): JSX.Element {
   return (
     <nav className="nav">
-      <ul className="nav-list">
+      <ul className="navList">
         {pages.map((page, id) => (
           <HeaderNavItem
             className="nav"

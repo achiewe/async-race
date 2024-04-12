@@ -14,10 +14,10 @@ function HeaderNavItem({
   };
 
   return (
-    <li className={`${className}-item`}>
+    <li className={`${className}Item`}>
       <a
-        className={`${className}-link ${
-          isActive ? `${className}-link-active` : ""
+        className={`${className}Link ${
+          isActive ? `${className}LinkActive` : ""
         }`}
         href={`#${path}`}
         onClick={changeActive}

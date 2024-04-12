@@ -30,14 +30,14 @@ function Garage({ appState }: Props): JSX.Element {
   const [carsControl, carsControlDispatch] = useReducer(manageCars, []);
   return (
     <main>
-      <div className="container garage-container">
+      <div className="container garageContainer">
         <div className="settings">
           <CreateCar
             dataStatus={{ dataChanged, setDataChanged }}
             appState={appState}
           />
           <UpdateCar appState={appState} />
-          <div className="settings-btns">
+          <div className="settingsBtns">
             <RaceSettings
               carsControlData={{ carsControl, carsControlDispatch }}
               dataStatus={{ dataChanged, setDataChanged }}

@@ -17,15 +17,15 @@ function PageNav({ page, path, pagesAmount }: PropsNavPage): JSX.Element {
   };
 
   return (
-    <nav className="page-nav-pagination">
+    <nav className="pageNavPagination">
       <Button
-        className="button btn-prev"
+        className="button btnPrev"
         text="prev"
         disabled={page.activeContent === 1}
         handleClick={toPrev}
       />
 
-      <ul className="page-list">
+      <ul className="pageList">
         {Array.from(Array(pagesAmount).keys()).map((num, idx) => (
           <PageNavItem
             className="page"
@@ -39,7 +39,7 @@ function PageNav({ page, path, pagesAmount }: PropsNavPage): JSX.Element {
       </ul>
 
       <Button
-        className="button btn-next"
+        className="button btnNext"
         text="next"
         disabled={page.activeContent === pagesAmount}
         handleClick={toNext}

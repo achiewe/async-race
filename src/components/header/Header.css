@@ -10,7 +10,7 @@
   color: #f3b552;
 }
 
-.header-gif {
+.headerGif {
   width: 200px;
   height: 70px;
   position: absolute;
@@ -19,7 +19,7 @@
 }
 
 @media (max-width: 630px) {
-  .header-gif {
+  .headerGif {
     display: none;
   }
 }

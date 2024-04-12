@@ -23,11 +23,11 @@
   background-color: #f5ce8e;
 }
 
-.btn-disabled {
+.btnDisabled {
   opacity: 0.3;
   cursor: auto;
 }
 
-.btn-disabled:hover {
+.btnDisabled:hover {
   background-color: #ffd68a;
 }

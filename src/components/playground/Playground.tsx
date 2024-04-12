@@ -19,16 +19,16 @@ function View(
 ): JSX.Element {
   return (
     <>
-      <div className="playground-page">
-        <p className="playground-header">
+      <div className="playgroundPage">
+        <p className="playgroundHeader">
           Garage{" "}
-          <span className="playground-amount">
+          <span className="playgroundAmount">
             ({carsAmount} {declOfWords(carsAmount, ["car", "cars"])})
           </span>
         </p>
         {carsOnPageData.carsOnPage.map((item, idx) => (
           <div
-            className="playground-item"
+            className="playgroundItem"
             key={`playground_${item.id.toString()}`}
           >
             <Car
@@ -51,8 +51,8 @@ function View(
         ))}
       </div>
 
-      <div className="page-nav">
-        <p className="page-nav-text">
+      <div className="pageNav">
+        <p className="pageNavText">
           Page {appState.page.activeContent}/{pagesAmount}
         </p>
         <PageNav page={appState.page} path="garage" pagesAmount={pagesAmount} />

@@ -9,7 +9,7 @@ function Button({
 }: PropsButton): JSX.Element {
   return (
     <button
-      className={`${className} ${disabled ? "btn-disabled" : ""}`}
+      className={`${className} ${disabled ? "btnDisabled" : ""}`}
       type="button"
       disabled={disabled}
       onClick={handleClick}

@@ -29,25 +29,25 @@ export default function CreateCar({
     appState.createColor.setNewCarColor(target.value);
   };
   return (
-    <div className="settings-container">
-      <div className="settings-content">
-        <div className="button-group">
-          <p className="button-group-title">Create: </p>
+    <div className="settingsContainer">
+      <div className="settingsContent">
+        <div className="buttonGroup">
+          <p className="buttonGroupTitle">Create: </p>
           <input
-            className="input-text"
+            className="inputText"
             type="text"
             onChange={onChangeName}
             value={appState.createName.newCarName}
           />
           <input
             value={appState.createColor.newCarColor}
-            className="input-color"
+            className="inputColor"
             type="color"
             onChange={onChangeColor}
           />
         </div>
         <Button
-          className="button btn-create"
+          className="button btnCreate"
           text="Create"
           disabled={false}
           handleClick={onCreateCar}

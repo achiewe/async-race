@@ -103,22 +103,22 @@ function RaceSettings({
 
   return (
     <>
-      <div className="settings-container">
-        <div className="settings-content">
+      <div className="settingsContainer">
+        <div className="settingsContent">
           <Button
-            className="button btn-start-race"
-            text="Start race!"
+            className="button btnStartRace"
+            text="Start race"
             disabled={isRaceStart}
             handleClick={startRace}
           />
           <Button
-            className="button btn-stop-race"
+            className="button btnStopRace"
             text="Reset"
             disabled={isRaceStop}
             handleClick={stopRace}
           />
           <Button
-            className="button btn-generate"
+            className="button btnGenerate"
             text="Generate cars"
             disabled={false}
             handleClick={generateCars}
@@ -126,7 +126,7 @@ function RaceSettings({
         </div>
       </div>
       <WinnerFrame
-        className={`${winner ? "active-modal" : ""}`}
+        className={`${winner ? "activeModal" : ""}`}
         winnerStatus={{ winner, setWinner }}
       />
     </>
