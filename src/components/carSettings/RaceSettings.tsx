@@ -14,6 +14,7 @@ import { useEffect, useState } from "react";
 import TCarWinner from "../../types/TCarWinner";
 import { TCarResp } from "../../types/TControls";
 import TGetWinner from "../../types/TGetWinner";
+import WinnerFrame from "../WinnerFrame/WinnerFrame";
 
 function RaceSettings({ carsControlData, dataStatus }: PropsRaceSettings) {
   const [isRaceStart, setIsRaceStart] = useState(false);
@@ -121,6 +122,10 @@ function RaceSettings({ carsControlData, dataStatus }: PropsRaceSettings) {
           />
         </div>
       </div>
+      <WinnerFrame
+        className={`${winner ? "active-modal" : ""}`}
+        winnerStatus={{ winner, setWinner }}
+      />
     </>
   );
 }
