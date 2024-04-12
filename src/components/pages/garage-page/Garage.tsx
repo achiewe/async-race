@@ -1,11 +1,11 @@
 import { useReducer, useState } from "react";
 import { TAppState } from "../../../types/TAppState";
-import CreateCarItem from "../../carSettings/createCar";
-import EditCarItem from "../../carSettings/updateCar";
 import { TCars } from "../../../types/TCarsData";
-import RaceSettings from "../../carSettings/raceSettings";
 import { TCarControls } from "../../../types/TControls";
-import Playground from "../../playground/playground";
+import Playground from "../../playground/Playground";
+import CreateCar from "../../carSettings/CreateCar";
+import RaceSettings from "../../carSettings/RaceSettings";
+import UpdateCar from "../../carSettings/UpdateCar";
 
 interface Props {
   appState: TAppState;
@@ -32,11 +32,11 @@ function Garage({ appState }: Props): JSX.Element {
     <main>
       <div className="container garage-container">
         <div className="settings">
-          <CreateCarItem
+          <CreateCar
             dataStatus={{ dataChanged, setDataChanged }}
             appState={appState}
           />
-          <EditCarItem appState={appState} />
+          <UpdateCar appState={appState} />
           <div className="settings-btns">
             <RaceSettings
               carsControlData={{ carsControl, carsControlDispatch }}

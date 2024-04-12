@@ -1,13 +1,10 @@
-import Button from "../buttons/button";
-import PropsCarCreate from "../../types/propsCarCreate";
-import { createCar } from "../../services/getDataApi";
-import getRandomInt from "../../services/getRandomInt";
-import "./settings.css";
+import { createCar } from "../../services/GetDataApi";
+import getRandomInt from "../../services/GetRandomInt";
+import "./Settings.css";
+import Button from "../buttons/Button";
+import PropsCarCreate from "../../types/PropsCarCreate";
 
-export default function CreateCarItem({
-  appState,
-  dataStatus,
-}: PropsCarCreate) {
+export default function CreateCar({ appState, dataStatus }: PropsCarCreate) {
   const onChangeName = ({ target }: { target: HTMLInputElement }) => {
     appState.createName.setNewCarName(target.value);
   };

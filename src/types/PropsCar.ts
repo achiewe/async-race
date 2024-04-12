@@ -1,13 +1,10 @@
-import { TCars } from "./TCarsData";
-import { TAppState } from "./TAppState";
+import { TCar } from "./TCarsData";
 import { TCarControls } from "./TControls";
+import { TAppState } from "./TAppState";
 
-type PropsPlayground = {
-  pageLimit: number;
-  carsOnPageData: {
-    carsOnPage: TCars;
-    setCarsOnPage: React.Dispatch<React.SetStateAction<TCars>>;
-  };
+interface PropsCar {
+  carsItemData: TCar;
+  carNumber: number;
   dataStatus: {
     dataChanged: boolean;
     setDataChanged: React.Dispatch<React.SetStateAction<boolean>>;
@@ -19,7 +16,8 @@ type PropsPlayground = {
       car: TCarControls;
     }>;
   };
-  appState: TAppState;
-};
 
-export default PropsPlayground;
+  appState: TAppState;
+}
+
+export default PropsCar;

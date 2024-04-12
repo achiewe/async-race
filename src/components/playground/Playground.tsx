@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import PropsPlayground from "../../types/propsPlayground";
-import Car from "../car/car";
-import { getCars } from "../../services/getDataApi";
-import PageNav from "../nav/page/pageNav";
-import declOfWords from "../../services/wordsDeclination";
-import "./playground.css";
+import { useEffect, useState } from "react";
+import PropsPlayground from "../../types/PropsPlayground";
+import Car from "../car/Car";
+import { getCars } from "../../services/GetDataApi";
+import PageNav from "../nav/page/PageNav";
+import declOfWords from "../../services/WordsDeclination";
+import "./Playground.css";
 
 function View(
   {

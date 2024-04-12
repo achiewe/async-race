@@ -1,10 +1,10 @@
-import brandsCollection from "../../services/brandsCollection";
-import { createCar } from "../../services/getDataApi";
-import getRandomInt from "../../services/getRandomInt";
-import modelCollection from "../../services/modelCollection";
+import brandsCollection from "../../services/BrandsCollection";
+import { createCar } from "../../services/GetDataApi";
+import getRandomInt from "../../services/GetRandomInt";
+import modelCollection from "../../services/ModelCollection";
 import { TCar } from "../../types/TCarsData";
-import PropsRaceSettings from "../../types/propsRaceSettings";
-import Button from "../buttons/button";
+import PropsRaceSettings from "../../types/PropsRaceSettings";
+import Button from "../buttons/Button";
 
 function RaceSettings({ carsControlData, dataStatus }: PropsRaceSettings) {
   const randomName = (): string => {

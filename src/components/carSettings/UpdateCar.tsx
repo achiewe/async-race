@@ -1,14 +1,14 @@
 import { useEffect } from "react";
 import { TAppState } from "../../types/TAppState";
-import { updateCar } from "../../services/getDataApi";
-import Button from "../buttons/button";
-import "./settings.css";
+import { updateCar } from "../../services/GetDataApi";
+import Button from "../buttons/Button";
+import "./Settings.css";
 
 interface Props {
   appState: TAppState;
 }
 
-function EditCarItem({ appState }: Props) {
+function UpdateCar({ appState }: Props) {
   const editName = ({ target }: { target: HTMLInputElement }) => {
     appState.editState.setEditedCarValueIsChanged(true);
     appState.editName.setEditedCarName(target.value);
@@ -86,4 +86,4 @@ function EditCarItem({ appState }: Props) {
   );
 }
 
-export default EditCarItem;
+export default UpdateCar;

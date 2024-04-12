@@ -1,11 +1,11 @@
 import React from "react";
 
-type PropsHeader = {
+interface PropsHeader {
   pages: string[];
   pageStatus: {
     activePage: string;
     setActivePage: React.Dispatch<React.SetStateAction<string>>;
   };
-};
+}
 
 export default PropsHeader;

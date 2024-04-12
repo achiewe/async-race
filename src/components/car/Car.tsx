@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import CarImage from "./carImage";
-import Controls from "./carControls";
-import "./car.css";
-import PropsCar from "../../types/propsCar";
+import "./Car.css";
+import CarControls from "./CarControls";
+import CarImage from "./CarImage";
+import PropsCar from "../../types/PropsCar";
 
 function Car({
   carsItemData,
@@ -57,7 +57,7 @@ function Car({
         </div>
       </div>
 
-      <Controls
+      <CarControls
         carDataStatus={carDataStatus}
         dataStatus={dataStatus}
         carsControlData={carsControlData}

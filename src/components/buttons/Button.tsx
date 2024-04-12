@@ -1,5 +1,5 @@
-import PropsButton from "../../types/propsButton";
-import "./button.css";
+import PropsButton from "../../types/PropsButton";
+import "./Button.css";
 
 function Button({ className, text, disabled, handleClick }: PropsButton) {
   return (

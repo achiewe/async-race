@@ -1,7 +1,7 @@
 import { TCarDataStatus, TAppState } from "./TAppState";
 import { TCarControls } from "./TControls";
 
-type PropsControl = {
+interface PropsControl {
   carDataStatus: TCarDataStatus;
   carEngineStart: {
     isEngineStarted: boolean;
@@ -27,6 +27,6 @@ type PropsControl = {
     }>;
   };
   appState: TAppState;
-};
+}
 
 export default PropsControl;

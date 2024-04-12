@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Header from "../header/header";
-import Garage from "../pages/garage-page/garage";
-import Winners from "../pages/winners-page/winners";
-import PageRoute from "../routing/pageRoute";
+import Header from "../header/Header";
+import Garage from "../pages/garage-page/Garage";
+import Winners from "../pages/winners-page/Winners";
+import PageRoute from "../routing/PageRoute";
 import { TAppState, TCarDataStatus } from "../../types/TAppState";
 
 function App() {

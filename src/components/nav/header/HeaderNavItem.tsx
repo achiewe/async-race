@@ -1,4 +1,4 @@
-import PropsNavHeaderItem from "../../../types/propsNavHeaderItem";
+import PropsNavHeaderItem from "../../../types/PropsNavHeaderItem";
 
 function HeaderNavItem({
   className,

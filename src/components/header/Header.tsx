@@ -1,6 +1,6 @@
-import PropsHeader from "../../types/propsHeader";
-import HeaderNav from "../nav/header/headerNav";
-import "./header.css";
+import PropsHeader from "../../types/PropsHeader";
+import HeaderNav from "../nav/header/HeaderNav";
+import "./Header.css";
 
 function Header({ pages, pageStatus }: PropsHeader) {
   return (

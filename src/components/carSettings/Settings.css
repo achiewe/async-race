@@ -63,7 +63,8 @@
 }
 
 .btn-stop-race {
-  background-color: #f34973;
+  background-color: #0000ff;
+  color: white;
   cursor: pointer;
 }
 

@@ -1,6 +1,6 @@
-import PropsImage from "../../types/propsImage";
+import PropsImage from "../../types/PropsImage";
 
-export default function carImage({ className, color }: PropsImage) {
+export default function CarImage({ className, color }: PropsImage) {
   return (
     <svg
       className={className}

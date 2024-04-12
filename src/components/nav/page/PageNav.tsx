@@ -1,7 +1,7 @@
-import Button from "../../buttons/button";
-import "./pageNav.css";
-import PageNavItem from "./pageNavItem";
-import PropsNavPage from "../../../types/propsNavPage";
+import Button from "../../buttons/Button";
+import "./PageNav.css";
+import PageNavItem from "./PageNavItem";
+import PropsNavPage from "../../../types/PropsNavPage";
 
 function PageNav({ page, path, pagesAmount }: PropsNavPage) {
   const toNext = () => {

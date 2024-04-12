@@ -1,4 +1,4 @@
-import PropsNavPageItem from "../../../types/propsNavPageItem";
+import PropsNavPageItem from "../../../types/PropsNavPageItem";
 
 function PageNavItem({
   className,

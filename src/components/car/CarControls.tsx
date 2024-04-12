@@ -1,6 +1,5 @@
-import React, { useEffect, useRef } from "react";
-import PropsControl from "../../types/propsControl";
-import Button from "../buttons/button";
+import { useEffect, useRef } from "react";
+import Button from "../buttons/Button";
 import {
   //   getWinner,
   //   deleteWinner,
@@ -8,10 +7,11 @@ import {
   startEngine,
   stopEngine,
   drive,
-} from "../../services/getDataApi";
-import "./carControls.css";
+} from "../../services/GetDataApi";
+import "./CarControls.css";
+import PropsControl from "../../types/PropsControl";
 
-function Controls({
+function CarControls({
   carDataStatus,
   dataStatus,
   appState,
@@ -131,4 +131,4 @@ function Controls({
   );
 }
 
-export default Controls;
+export default CarControls;
