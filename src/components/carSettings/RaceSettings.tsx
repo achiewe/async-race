@@ -12,6 +12,7 @@ import { TCarResp } from "../../types/TControls";
 function RaceSettings({ carsControlData, dataStatus }: PropsRaceSettings) {
   const [isRaceStart, setIsRaceStart] = useState(false);
   const [isRaceStop, setIsRaceStop] = useState(false);
+  const [winner, setWinner] = useState<TCarWinner | null>(null);
   const [getAnswer, setGetAnswer] = useState<TCarWinner | Error>(new Error());
 
   const startRace = async () => {
@@ -34,6 +35,16 @@ function RaceSettings({ carsControlData, dataStatus }: PropsRaceSettings) {
       .then((res) => res)
       .catch((e) => e);
     setGetAnswer(racerWinner);
+  };
+
+  const stopRace = async () => {
+    setIsRaceStop(true);
+    setIsRaceStart(false);
+    const carsPromises = carsControlData.carsControl.map((car) =>
+      car.carStop()
+    );
+    await Promise.all(carsPromises);
+    setWinner(null);
   };
 
   const randomName = (): string => {
@@ -68,10 +79,8 @@ function RaceSettings({ carsControlData, dataStatus }: PropsRaceSettings) {
           <Button
             className="button btn-stop-race"
             text="Reset"
-            disabled
-            handleClick={() => {
-              console.log("click");
-            }}
+            disabled={isRaceStop}
+            handleClick={stopRace}
           />
           <Button
             className="button btn-generate"
