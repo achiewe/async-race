@@ -1,6 +1,6 @@
 import PropsWinnerTitle from "../../../types/PropsWinnerTitle";
 
-function WinnerTitle(): JSX.Element {
+function WinnerTitle({ sortData }: PropsWinnerTitle): JSX.Element {
   return (
     <div className="winTitle">
       <div className="winTitleContent winTitleNumber">№</div>
