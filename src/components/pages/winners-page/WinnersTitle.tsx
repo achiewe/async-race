@@ -1,6 +1,6 @@
 import PropsWinnerTitle from "../../../types/PropsWinnerTitle";
 
-function WinnerTitle() {
+function WinnerTitle(): JSX.Element {
   return (
     <div className="winTitle">
       <div className="winTitleContent winTitleNumber">№</div>

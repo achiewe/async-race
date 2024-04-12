@@ -19,7 +19,7 @@ function CarControls({
   carEngineStop,
   carAnimation,
   carsControlData,
-}: PropsControl) {
+}: PropsControl): JSX.Element {
   const selectCar = () => {
     appState.editState.setEditedCarValueIsChanged(false);
     appState.selected.setSelectedCar(carDataStatus);

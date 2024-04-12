@@ -3,7 +3,7 @@ import "./PageNav.css";
 import PageNavItem from "./PageNavItem";
 import PropsNavPage from "../../../types/PropsNavPage";
 
-function PageNav({ page, path, pagesAmount }: PropsNavPage) {
+function PageNav({ page, path, pagesAmount }: PropsNavPage): JSX.Element {
   const toNext = () => {
     if (page.activeContent < pagesAmount) {
       page.setActiveContent(page.activeContent + 1);

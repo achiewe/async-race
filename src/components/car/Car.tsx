@@ -10,7 +10,7 @@ function Car({
   dataStatus,
   carsControlData,
   appState,
-}: PropsCar) {
+}: PropsCar): JSX.Element {
   const [carIdState, setCarIdState] = useState(carsItemData.id);
   const [carNameState, setCarNameState] = useState(carsItemData.name);
   const [carColorState, setCarColorState] = useState(carsItemData.color);

@@ -1,7 +1,7 @@
 import "./WinnerFrame.css";
 import PropsFrame from "../../types/PropsFrame";
 
-function WinnerFrame({ className, winnerStatus }: PropsFrame) {
+function WinnerFrame({ className, winnerStatus }: PropsFrame): JSX.Element {
   const animationEnd = () => winnerStatus.setWinner(null);
 
   return (

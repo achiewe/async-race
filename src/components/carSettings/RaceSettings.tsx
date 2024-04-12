@@ -16,7 +16,10 @@ import { TCarResp } from "../../types/TControls";
 import TGetWinner from "../../types/TGetWinner";
 import WinnerFrame from "../WinnerFrame/WinnerFrame";
 
-function RaceSettings({ carsControlData, dataStatus }: PropsRaceSettings) {
+function RaceSettings({
+  carsControlData,
+  dataStatus,
+}: PropsRaceSettings): JSX.Element {
   const [isRaceStart, setIsRaceStart] = useState(false);
   const [isRaceStop, setIsRaceStop] = useState(false);
   const [winner, setWinner] = useState<TCarWinner | null>(null);

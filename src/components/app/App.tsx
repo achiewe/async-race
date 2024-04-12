@@ -5,7 +5,7 @@ import Winners from "../pages/winners-page/Winners";
 import PageRoute from "../routing/PageRoute";
 import { TAppState, TCarDataStatus } from "../../types/TAppState";
 
-function App() {
+function App(): JSX.Element {
   const pages = ["garage", "winners"];
   const [activePage, setActivePage] = useState("garage");
   const [activeContent, setActiveContent] = useState(1);

@@ -4,7 +4,10 @@ import "./Settings.css";
 import Button from "../buttons/Button";
 import PropsCarCreate from "../../types/PropsCarCreate";
 
-export default function CreateCar({ appState, dataStatus }: PropsCarCreate) {
+export default function CreateCar({
+  appState,
+  dataStatus,
+}: PropsCarCreate): JSX.Element {
   const onChangeName = ({ target }: { target: HTMLInputElement }) => {
     appState.createName.setNewCarName(target.value);
   };

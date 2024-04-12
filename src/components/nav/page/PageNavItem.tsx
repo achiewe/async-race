@@ -6,7 +6,7 @@ function PageNavItem({
   page,
   isActive,
   setActivePage,
-}: PropsNavPageItem) {
+}: PropsNavPageItem): JSX.Element {
   const changeActive = () => setActivePage(page);
 
   return (

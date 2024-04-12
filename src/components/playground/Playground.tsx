@@ -16,7 +16,7 @@ function View(
   }: PropsPlayground,
   carsAmount: number,
   pagesAmount: number
-) {
+): JSX.Element {
   return (
     <>
       <div className="playground-page">

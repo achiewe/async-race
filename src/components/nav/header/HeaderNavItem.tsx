@@ -6,7 +6,7 @@ function HeaderNavItem({
   description,
   isActive,
   setActivePage,
-}: PropsNavHeaderItem) {
+}: PropsNavHeaderItem): JSX.Element {
   const changeActive = () => {
     setActivePage(path);
     const navEvent = new PopStateEvent("popstate");

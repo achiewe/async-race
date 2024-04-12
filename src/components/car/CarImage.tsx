@@ -1,6 +1,9 @@
 import PropsImage from "../../types/PropsImage";
 
-export default function CarImage({ className, color }: PropsImage) {
+export default function CarImage({
+  className,
+  color,
+}: PropsImage): JSX.Element {
   return (
     <svg
       className={className}

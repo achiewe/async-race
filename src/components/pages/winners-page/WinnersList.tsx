@@ -1,6 +1,6 @@
 import WinnerTitle from "./WinnersTitle";
 
-function WinnerList() {
+function WinnerList(): JSX.Element {
   return (
     <div className="winnersData">
       <p className="winnersTitle">Winners</p>

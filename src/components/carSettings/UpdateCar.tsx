@@ -8,7 +8,7 @@ interface Props {
   appState: TAppState;
 }
 
-function UpdateCar({ appState }: Props) {
+function UpdateCar({ appState }: Props): JSX.Element {
   const editName = ({ target }: { target: HTMLInputElement }) => {
     appState.editState.setEditedCarValueIsChanged(true);
     appState.editName.setEditedCarName(target.value);

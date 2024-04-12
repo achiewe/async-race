@@ -2,7 +2,7 @@ import PropsHeader from "../../../types/PropsHeader";
 import "./HeaderNav.css";
 import HeaderNavItem from "./HeaderNavItem";
 
-function HeaderNav({ pages, pageStatus }: PropsHeader) {
+function HeaderNav({ pages, pageStatus }: PropsHeader): JSX.Element {
   return (
     <nav className="nav">
       <ul className="nav-list">
