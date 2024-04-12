@@ -1,0 +1,77 @@
+.winnersData {
+  flex-grow: 1;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.winTitleContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 746px) {
+  .win-title-content {
+    font-size: 14px;
+  }
+}
+
+.winTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  padding: 4px 0;
+  gap: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background-color: #00798a;
+}
+
+.winTitleNumber {
+  width: 30px;
+}
+
+.winTitleImage {
+  width: 200px;
+}
+
+.winTitleName {
+  width: 240px;
+}
+
+.winTitleQuantity {
+  width: 150px;
+}
+
+.winTitleTime {
+  width: 180px;
+}
+
+.sort {
+  padding-left: 5px;
+}
+
+.sortArrow {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  padding: 5px;
+  background-image: url("../../../../assets/arrow-up.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0;
+}
+
+.sortCheckbox {
+  display: none;
+}
+
+.sortCheckbox:checked ~ .sortArrow {
+  transform: rotate(180deg);
+}
