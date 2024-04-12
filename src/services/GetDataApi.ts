@@ -107,3 +107,46 @@ export async function drive(id: number) {
     .then((res) => res)
     .catch((err) => err);
 }
+
+export async function getWinner(id: number) {
+  return fetch(`${winnersURL}/${id}`)
+    .then((res) => {
+      if (res.ok) return res.json();
+      throw new Error(res.statusText);
+    })
+    .catch((err) => err);
+}
+
+export async function createWinner(id: number, wins: number, time: number) {
+  const options = {
+    method: "POST",
+    body: JSON.stringify({ id, wins, time }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+
+  return fetch(winnersURL, options)
+    .then((res) => {
+      if (res.ok) return res.json();
+      throw new Error(res.statusText);
+    })
+    .catch((err) => err);
+}
+
+export async function updateWinner(id: number, wins: number, time: number) {
+  const options = {
+    method: "PUT",
+    body: JSON.stringify({ wins, time }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+
+  return fetch(`${winnersURL}/${id}`, options)
+    .then((res) => {
+      if (res.ok) return res.json();
+      throw new Error(res.statusText);
+    })
+    .catch((err) => err);
+}

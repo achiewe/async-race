@@ -1,13 +1,19 @@
 import brandsCollection from "../../services/BrandsCollection";
-import { createCar } from "../../services/GetDataApi";
+import {
+  createCar,
+  createWinner,
+  getWinner,
+  updateWinner,
+} from "../../services/GetDataApi";
 import getRandomInt from "../../services/GetRandomInt";
 import modelCollection from "../../services/ModelCollection";
 import { TCar } from "../../types/TCarsData";
 import PropsRaceSettings from "../../types/PropsRaceSettings";
 import Button from "../buttons/Button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TCarWinner from "../../types/TCarWinner";
 import { TCarResp } from "../../types/TControls";
+import TGetWinner from "../../types/TGetWinner";
 
 function RaceSettings({ carsControlData, dataStatus }: PropsRaceSettings) {
   const [isRaceStart, setIsRaceStart] = useState(false);
@@ -65,6 +71,31 @@ function RaceSettings({ carsControlData, dataStatus }: PropsRaceSettings) {
     await Promise.all(newCarsSet);
     dataStatus.setDataChanged(true);
   };
+
+  useEffect(() => {
+    (async () => {
+      if (winner) {
+        const findWinner: TGetWinner | Error = await getWinner(winner.id);
+        if (findWinner instanceof Error)
+          await createWinner(winner.id, 1, winner.time);
+        else if (findWinner.time < winner.time) {
+          await updateWinner(
+            findWinner.id,
+            findWinner.wins + 1,
+            findWinner.time
+          );
+        } else {
+          await updateWinner(findWinner.id, findWinner.wins + 1, winner.time);
+        }
+      }
+    })();
+  }, [winner]);
+
+  useEffect(() => {
+    if (!(getAnswer instanceof Error) && !isRaceStop) {
+      setWinner(getAnswer);
+    }
+  }, [getAnswer]);
 
   return (
     <>
