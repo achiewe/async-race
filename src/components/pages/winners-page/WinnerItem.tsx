@@ -9,14 +9,14 @@ function WinnerItem({
   bestTime,
 }: PropsWinnerItem) {
   return (
-    <li className="win-item">
-      <div className="win-content win-item-number">{number}</div>
-      <div className="win-content win-item-image">
-        <CarImage className="car-svg" color={color} />
+    <li className="winItem">
+      <div className="winContent winItemNumber">{number}</div>
+      <div className="winContent winItemImage">
+        <CarImage className="carSvg" color={color} />
       </div>
-      <div className="win-content win-item-name">{name}</div>
-      <div className="win-content win-item-quantity">{winsAmount}</div>
-      <div className="win-content win-item-time">{bestTime}</div>
+      <div className="winContent winItemName">{name}</div>
+      <div className="winContent winItemQuantity">{winsAmount}</div>
+      <div className="winContent winItemTime">{bestTime}</div>
     </li>
   );
 }

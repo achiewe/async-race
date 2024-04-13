@@ -12,6 +12,7 @@
   width: 100%;
 }
 
+.winContent,
 .winTitleContent {
   display: flex;
   align-items: center;
@@ -21,6 +22,22 @@
   .winTitleContent {
     font-size: 14px;
   }
+}
+
+.winItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  margin-bottom: 5px;
+  padding: 5px 0;
+  font-weight: 500;
+  background-color: #f3b552;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 .winTitle {
@@ -41,23 +58,28 @@
   background-color: #f3b552;
 }
 
-.winTitleNumber {
+.winTitleNumber,
+.winItemNumber {
   width: 30px;
 }
 
-.winTitleImage {
+.winTitleImage,
+.winItemImage {
   width: 200px;
 }
 
-.winTitleName {
+.winTitleName,
+.winItemName {
   width: 240px;
 }
 
-.winTitleQuantity {
+.winTitleQuantity,
+.winItemQuantity {
   width: 150px;
 }
 
-.winTitleTime {
+.winTitleTime,
+.winItemTime {
   width: 180px;
 }
 
