@@ -5,7 +5,7 @@ import "./Header.css";
 function Header({ pages, pageStatus }: PropsHeader): JSX.Element {
   return (
     <header className="header">
-      <h1 className="headling">Car Racing 2024</h1>
+      <h1 className="headling">Welcome to car racing 2024</h1>
       <div className="container">
         <HeaderNav pages={pages} pageStatus={pageStatus} />
       </div>

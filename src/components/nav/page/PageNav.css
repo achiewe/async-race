@@ -41,11 +41,11 @@
 }
 
 .pageLink:hover {
-  background-color: #00cccc;
+  background-color: #f3b552;
 }
 
 .pageLinkActive {
-  border: 1px solid #00cccc;
+  border: 1px solid #f3b552;
 }
 
 .btnNext,
