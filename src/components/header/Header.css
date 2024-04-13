@@ -12,9 +12,9 @@
 
 .headerGif {
   width: 200px;
-  height: 70px;
+  height: 100px;
   position: absolute;
-  top: 20px;
+  top: 0px;
   right: 10px;
 }
 

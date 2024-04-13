@@ -10,7 +10,7 @@ function Header({ pages, pageStatus }: PropsHeader): JSX.Element {
         <HeaderNav pages={pages} pageStatus={pageStatus} />
       </div>
       <img
-        src="../../../assets/lamborghini.png"
+        src="../../../assets/F1CarPng.png"
         className="headerGif"
         alt="lamborghini car"
       />
