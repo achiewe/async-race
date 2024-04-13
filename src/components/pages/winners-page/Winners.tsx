@@ -62,6 +62,20 @@ function Winners(): JSX.Element {
     })();
   }, []);
 
+  useEffect(() => {
+    (async () => {
+      const winnersList = await getWinners(
+        activeContent,
+        pageLimit,
+        sortBy,
+        sortType
+      );
+      setWinnersAmount(winnersList.winnersX);
+      setWinnersData(winnersList.winnersOnPage);
+      setLoading(false);
+    })();
+  }, [activeContent, sortBy, sortType]);
+
   const content = View({
     pageLimit,
     activeContent,
