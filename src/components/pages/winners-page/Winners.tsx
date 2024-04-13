@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PropsWinner from "../../../types/PropsWinner";
 import WinnerList from "./WinnersList";
 import TWinner from "../../../types/TWinner";
 import TWinnerListItem from "../../../types/TWinnerListItem";
 import "./Winners.css";
 import PageNav from "../../nav/page/PageNav";
-import Loader from "../../loader/Loader";
+import { getWinners } from "../../../services/GetDataApi";
 
 function View({
   pageLimit,
@@ -40,7 +40,6 @@ function View({
           pagesAmount={pagesAmount}
         />
       </div>
-      <Loader />
     </div>
   );
 }
@@ -55,6 +54,13 @@ function Winners(): JSX.Element {
   const [winnersAmount, setWinnersAmount] = useState(0);
   const [sortBy, setSortBy] = useState("");
   const [sortType, setSortType] = useState("");
+
+  useEffect(() => {
+    (async () => {
+      const winnersList = await getWinners(1, pageLimit);
+      setPagesAmount(Math.ceil(winnersList.winnersX / pageLimit));
+    })();
+  }, []);
 
   const content = View({
     pageLimit,
