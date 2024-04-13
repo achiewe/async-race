@@ -108,6 +108,28 @@ export async function drive(id: number) {
     .catch((err) => err);
 }
 
+export async function getWinners(
+  page?: number,
+  limit?: number,
+  sort?: string,
+  order?: string
+) {
+  const mainURL = new URL(`${winnersURL}`);
+  const propsUrl = new URLSearchParams({
+    _page: `${page || ""}`,
+    _limit: `${limit || ""}`,
+    _sort: `${sort || ""}`,
+    _order: `${order || ""}`,
+  });
+  mainURL.search = propsUrl.toString();
+
+  return fetch(mainURL).then(async (res) => {
+    const winnersX = Number(res.headers.get("X-Total-Count"));
+    const winnersOnPage = await res.json();
+    return { winnersX, winnersOnPage };
+  });
+}
+
 export async function getWinner(id: number) {
   return fetch(`${winnersURL}/${id}`)
     .then((res) => {

@@ -3,6 +3,8 @@ import PropsWinner from "../../../types/PropsWinner";
 import WinnerList from "./WinnersList";
 import TWinner from "../../../types/TWinner";
 import TWinnerListItem from "../../../types/TWinnerListItem";
+import "./Winners.css";
+import PageNav from "../../nav/page/PageNav";
 
 function View({
   pageLimit,
@@ -19,7 +21,7 @@ function View({
   pagesAmount,
 }: PropsWinner): JSX.Element {
   return (
-    <div className="winnerList">
+    <div className="winnerWrapper">
       <WinnerList
         pageLimit={pageLimit}
         activePage={activeContent}
@@ -27,6 +29,16 @@ function View({
         allWinners={{ winnersAmount, setWinnersAmount }}
         sortData={{ sortBy, setSortBy, sortType, setSortType }}
       />
+      <div className="winPageNav">
+        <p className="winPageText">
+          Page {activeContent}/{pagesAmount}
+        </p>
+        <PageNav
+          page={{ activeContent, setActiveContent }}
+          path="winners"
+          pagesAmount={pagesAmount}
+        />
+      </div>
     </div>
   );
 }
@@ -41,6 +53,7 @@ function Winners(): JSX.Element {
   const [winnersAmount, setWinnersAmount] = useState(0);
   const [sortBy, setSortBy] = useState("");
   const [sortType, setSortType] = useState("");
+
   const content = View({
     pageLimit,
     activeContent,

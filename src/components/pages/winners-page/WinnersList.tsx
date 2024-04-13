@@ -1,4 +1,6 @@
+import declOfWords from "../../../services/WordsDeclination";
 import PropsWinnerList from "../../../types/PropsWinnerList";
+import WinnerItem from "./WinnerItem";
 import WinnerTitle from "./WinnerTitle";
 
 function WinnerList({
@@ -10,9 +12,25 @@ function WinnerList({
 }: PropsWinnerList): JSX.Element {
   return (
     <div className="winnersData">
-      <p className="winnersTitle">Winners</p>
+      <p>
+        Winners ({allWinners.winnersAmount}{" "}
+        {declOfWords(allWinners.winnersAmount, ["car", "cars"])})
+      </p>
       <WinnerTitle sortData={sortData} />
-      <ul className="winners-list"></ul>
+      <ul className="winners-list">
+        {winners.winnersFullData.map((winner, idx) => {
+          return (
+            <WinnerItem
+              number={activePage * pageLimit + idx - pageLimit + 1}
+              color={winner.color}
+              name={winner.name}
+              winsAmount={winner.wins}
+              bestTime={winner.time}
+              key={`${idx.toString()}`}
+            />
+          );
+        })}
+      </ul>
     </div>
   );
 }

@@ -1,3 +1,11 @@
+.winnerWrapper {
+  height: 86vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
 .winnersData {
   flex-grow: 1;
   max-width: 1100px;
@@ -30,7 +38,7 @@
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  background-color: #00798a;
+  background-color: #f3b552;
 }
 
 .winTitleNumber {
@@ -53,6 +61,15 @@
   width: 180px;
 }
 
+.winPageText {
+  text-align: center;
+}
+
+.winPageNav {
+  align-items: center;
+  justify-content: center;
+}
+
 .sort {
   padding-left: 5px;
 }
@@ -62,7 +79,7 @@
   height: 25px;
   display: inline-block;
   padding: 5px;
-  background-image: url("../../../../assets/arrow-up.svg");
+  /* background-image: url("../../../../assets/arrow-up.svg"); */
   background-repeat: no-repeat;
   background-size: contain;
   padding: 0;
