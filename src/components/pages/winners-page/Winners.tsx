@@ -94,7 +94,7 @@ function Winners(): JSX.Element {
     })();
   }, [winnersData]);
 
-  const spinner = loading ? <Loader /> : null;
+  const laoder = loading ? <Loader /> : null;
   const content = !loading
     ? View({
         pageLimit,
@@ -114,7 +114,7 @@ function Winners(): JSX.Element {
 
   return (
     <main className="winners">
-      {spinner}
+      {laoder}
       {content}
     </main>
   );
