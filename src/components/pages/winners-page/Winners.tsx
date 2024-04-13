@@ -5,7 +5,9 @@ import TWinner from "../../../types/TWinner";
 import TWinnerListItem from "../../../types/TWinnerListItem";
 import "./Winners.css";
 import PageNav from "../../nav/page/PageNav";
-import { getWinners } from "../../../services/GetDataApi";
+import { getCar, getWinners } from "../../../services/GetDataApi";
+import { TCar } from "../../../types/TCarsData";
+import Loader from "../../loader/Loader";
 
 function View({
   pageLimit,
@@ -76,22 +78,46 @@ function Winners(): JSX.Element {
     })();
   }, [activeContent, sortBy, sortType]);
 
-  const content = View({
-    pageLimit,
-    activeContent,
-    setActiveContent,
-    winnersFullData,
-    setWinnersFullData,
-    winnersAmount,
-    setWinnersAmount,
-    sortBy,
-    setSortBy,
-    sortType,
-    setSortType,
-    pagesAmount,
-  });
+  useEffect(() => {
+    (async () => {
+      const dataPromises = winnersData.map(async (winPerson) => {
+        const carData: TCar = await getCar(winPerson.id);
+        const winnerFullData: TWinnerListItem = Object.assign(
+          winPerson,
+          carData
+        );
+        return winnerFullData;
+      });
 
-  return <main className="winners">{content}</main>;
+      const complexData = await Promise.all(dataPromises);
+      setWinnersFullData(complexData);
+    })();
+  }, [winnersData]);
+
+  const spinner = loading ? <Loader /> : null;
+  const content = !loading
+    ? View({
+        pageLimit,
+        activeContent,
+        setActiveContent,
+        winnersFullData,
+        setWinnersFullData,
+        winnersAmount,
+        setWinnersAmount,
+        sortBy,
+        setSortBy,
+        sortType,
+        setSortType,
+        pagesAmount,
+      })
+    : null;
+
+  return (
+    <main className="winners">
+      {spinner}
+      {content}
+    </main>
+  );
 }
 
 export default Winners;
