@@ -172,3 +172,16 @@ export async function updateWinner(id: number, wins: number, time: number) {
     })
     .catch((err) => err);
 }
+
+export async function deleteWinner(id: number) {
+  const options = {
+    method: "DELETE",
+  };
+
+  return fetch(`${winnersURL}/${id}`, options)
+    .then((res) => {
+      if (res.ok) return res.json();
+      throw new Error(res.statusText);
+    })
+    .catch((err) => err);
+}

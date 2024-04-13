@@ -7,6 +7,8 @@ import {
   startEngine,
   stopEngine,
   drive,
+  getWinner,
+  deleteWinner,
 } from "../../services/GetDataApi";
 import "./CarControls.css";
 import PropsControl from "../../types/PropsControl";
@@ -26,7 +28,14 @@ function CarControls({
   };
 
   const removeCar = async () => {
+    const removeWin = await getWinner(carDataStatus.idData.id);
+
+    if (!(removeWin instanceof Error)) {
+      await deleteWinner(carDataStatus.idData.id);
+    }
+
     const removeAuto = await deleteCar(carDataStatus.idData.id);
+
     if (!(removeAuto instanceof Error)) {
       dataStatus.setDataChanged(true);
     }
