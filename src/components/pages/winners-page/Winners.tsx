@@ -5,6 +5,7 @@ import TWinner from "../../../types/TWinner";
 import TWinnerListItem from "../../../types/TWinnerListItem";
 import "./Winners.css";
 import PageNav from "../../nav/page/PageNav";
+import Loader from "../../loader/Loader";
 
 function View({
   pageLimit,
@@ -39,6 +40,7 @@ function View({
           pagesAmount={pagesAmount}
         />
       </div>
+      <Loader />
     </div>
   );
 }
