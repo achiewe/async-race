@@ -1,25 +1,24 @@
 import PropsWinnerTitle from "../../../types/PropsWinnerTitle";
 
-function WinnerTitle({ sortData }: PropsWinnerTitle): JSX.Element {
-  const sortByWins = ({ target }: { target: HTMLInputElement }) => {
-    sortData.setSortBy("wins");
+const SORT_CRITERIA = {
+  WINS: "wins",
+  TIME: "time",
+};
 
-    if (target.checked) {
-      sortData.setSortType("ASC");
-    } else {
-      sortData.setSortType("DESC");
-    }
+function WinnerTitle({ sortData }: PropsWinnerTitle): JSX.Element {
+  const sortBy = (criteria: string, type: string) => {
+    sortData.setSortBy(criteria);
+    sortData.setSortType(type);
+  };
+
+  const sortByWins = ({ target }: { target: HTMLInputElement }) => {
+    sortBy(SORT_CRITERIA.WINS, target.checked ? "ASC" : "DESC");
   };
 
   const sortByTime = ({ target }: { target: HTMLInputElement }) => {
-    sortData.setSortBy("time");
-
-    if (target.checked) {
-      sortData.setSortType("ASC");
-    } else {
-      sortData.setSortType("DESC");
-    }
+    sortBy(SORT_CRITERIA.TIME, target.checked ? "ASC" : "DESC");
   };
+
   return (
     <div className="winTitle">
       <div className="winTitleContent winTitleNumber">№</div>
