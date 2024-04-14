@@ -25,6 +25,17 @@ function RaceSettings({
   const [winner, setWinner] = useState<TCarWinner | null>(null);
   const [getAnswer, setGetAnswer] = useState<TCarWinner | Error>(new Error());
 
+  const updateWinnerInfo = async (winner: TCarWinner) => {
+    const findWinner: TGetWinner | Error = await getWinner(winner.id);
+    if (findWinner instanceof Error) {
+      await createWinner(winner.id, 1, winner.time);
+    } else if (findWinner.time < winner.time) {
+      await updateWinner(findWinner.id, findWinner.wins + 1, findWinner.time);
+    } else {
+      await updateWinner(findWinner.id, findWinner.wins + 1, winner.time);
+    }
+  };
+
   const startRace = async () => {
     setIsRaceStart(true);
     setIsRaceStop(false);
@@ -77,22 +88,9 @@ function RaceSettings({
   };
 
   useEffect(() => {
-    (async () => {
-      if (winner) {
-        const findWinner: TGetWinner | Error = await getWinner(winner.id);
-        if (findWinner instanceof Error)
-          await createWinner(winner.id, 1, winner.time);
-        else if (findWinner.time < winner.time) {
-          await updateWinner(
-            findWinner.id,
-            findWinner.wins + 1,
-            findWinner.time
-          );
-        } else {
-          await updateWinner(findWinner.id, findWinner.wins + 1, winner.time);
-        }
-      }
-    })();
+    if (winner) {
+      updateWinnerInfo(winner);
+    }
   }, [winner]);
 
   useEffect(() => {
