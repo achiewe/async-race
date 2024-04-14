@@ -8,26 +8,27 @@ export default function CreateCar({
   appState,
   dataStatus,
 }: PropsCarCreate): JSX.Element {
-  const onChangeName = ({ target }: { target: HTMLInputElement }) => {
-    appState.createName.setNewCarName(target.value);
+  const handleChangeName = (newName: string) => {
+    appState.createName.setNewCarName(newName);
   };
 
-  const onCreateCar = async () => {
-    const newName =
-      appState.createName.newCarName.length !== 0
-        ? appState.createName.newCarName
-        : `Your super-car RSS#${getRandomInt(1, 1000)}`;
+  const handleCreateCar = async () => {
+    let newName = appState.createName.newCarName;
+    if (!newName) {
+      newName = `Your super-car RSS#${getRandomInt(1, 1000)}`;
+    }
 
     await createCar(newName, appState.createColor.newCarColor);
 
     dataStatus.setDataChanged(true);
-    appState.createName.setNewCarName("");
+    handleChangeName("");
     appState.createColor.setNewCarColor("#000000");
   };
 
-  const onChangeColor = ({ target }: { target: HTMLInputElement }) => {
-    appState.createColor.setNewCarColor(target.value);
+  const handleChangeColor = (newColor: string) => {
+    appState.createColor.setNewCarColor(newColor);
   };
+
   return (
     <div className="settingsContainer">
       <div className="settingsContent">
@@ -36,21 +37,21 @@ export default function CreateCar({
           <input
             className="inputText"
             type="text"
-            onChange={onChangeName}
+            onChange={(e) => handleChangeName(e.target.value)}
             value={appState.createName.newCarName}
           />
           <input
             value={appState.createColor.newCarColor}
             className="inputColor"
             type="color"
-            onChange={onChangeColor}
+            onChange={(e) => handleChangeColor(e.target.value)}
           />
         </div>
         <Button
           className="button btnCreate"
           text="Create"
           disabled={false}
-          handleClick={onCreateCar}
+          handleClick={handleCreateCar}
         />
       </div>
     </div>
