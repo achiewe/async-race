@@ -21,6 +21,8 @@
 
 ## Screenshot:
 
+![](./assets/screenshot.png)
+
 ## Key skills
 
 TypeScript
