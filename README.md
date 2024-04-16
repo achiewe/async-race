@@ -1,6 +1,6 @@
 # Async Race Project
 
-[UI Deployment Link](https://async-race2.vercel.app/) (Score: 405/405)
+[UI Deployment Link](https://async-race2.vercel.app/) (Score: 395/405)
 
 ## Checklist
 
